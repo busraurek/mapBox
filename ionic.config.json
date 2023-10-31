@@ -1,0 +1,7 @@
+{
+  "name": "mapBox",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
