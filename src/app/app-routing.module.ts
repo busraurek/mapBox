@@ -3,14 +3,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
+    path: 'map',
+    redirectTo: 'map',
     pathMatch: 'full'
   },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
+ 
 ];
 
 @NgModule({
@@ -20,3 +25,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
